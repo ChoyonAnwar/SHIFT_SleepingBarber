@@ -16,6 +16,10 @@ void Customer(int M) {					// produces Customers
 		{
 			id.push_front(customer);
 		}
+		else
+		{
+			cout << "Customer " << customer << " is leaving." << endl;
+		}
 		locker.unlock();
 		cond.notify_one();
 		this_thread::sleep_for(chrono::seconds(3));
